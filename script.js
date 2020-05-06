@@ -47,20 +47,20 @@ let selectedCountry = "";
 
 addForm.countryField.change( function() {
   selectedCountry = $("#addCountry option:selected").val();
-  if (selectedCountry == "Pakistan") {
-    $('.Pakistan').show();
+  if (selectedCountry == "Nepal") {
+    $('.Nepal').show();
     $('.India').hide();
     $('.USA').hide();
   }
 
   if (selectedCountry == "India") {
-    $('.Pakistan').hide();
+    $('.Nepal').hide();
     $('.India').show();
     $('.USA').hide();
   }
 
   if (selectedCountry == "USA") {
-    $('.Pakistan').hide();
+    $('.Nepal').hide();
     $('.India').hide();
     $('.USA').show();
   }
@@ -68,20 +68,20 @@ addForm.countryField.change( function() {
 
 $("#updateCountry").change( function() {
   selectedCountry = $("#updateCountry option:selected").val();
-  if (selectedCountry == "Pakistan") {
-    $('.Pakistan').show();
+  if (selectedCountry == "Nepal") {
+    $('.Nepal').show();
     $('.India').hide();
     $('.USA').hide();
   }
 
   if (selectedCountry == "India") {
-    $('.Pakistan').hide();
+    $('.Nepal').hide();
     $('.India').show();
     $('.USA').hide();
   }
 
   if (selectedCountry == "USA") {
-    $('.Pakistan').hide();
+    $('.Nepal').hide();
     $('.India').hide();
     $('.USA').show();
   }
