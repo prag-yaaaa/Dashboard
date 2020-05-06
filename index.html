@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <title>Student Table</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <h1>Student Management System</h1>
+        <a href="/Student management system/Admin Panel/index.php" style="color: white; background: var(--primary); text-decoration: none; float: right;">Log Out </a>
+    </nav>
+    <div class="navigation">
+        <h2>Manage Students</h2>
+        <button class="btn" id="openAddFormButton">ADD STUDENT</button>
+    </div>
+    <div class="main">
+
+        <div class="table_container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sr</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Subject</th>
+                        <th>Country</th>
+                        <th>City</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+        
+        <div id="addStudentFormDiv">
+            <i id="closeAddFormButton" class="material-icons">close</i>
+            <h2> ADD NEW STUDENT </h2>
+            <form id="addStudentForm" action="index.html">
+                <input required name="Id" type="text" placeholder="give id" id="addId" value="HA001">
+                <div class="error" id="idExists"></div>
+                <input required name="Name" type="text" placeholder="enter name" id="addName" value="Hassan">
+                <input required name="Age" type="number" placeholder="specify age" id="addAge" value="24" min="18">
+                <input required name="Subject" type="text" placeholder="enter subject" id="addSubject" value="JavaScript">
+                <select required name="Country" id="addCountry">
+                    <option value="Pakistan">Pakistan</option>
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                </select>
+                <select required name="City" id="addCity">
+                    <optgroup class="Pakistan">
+                        <option value="Lahore">Lahore</option>
+                        <option value="Karachi">Karachi</option>
+                        <option value="Multan">Multan</option>
+                    </optgroup>
+                    <optgroup class="India">
+                        <option value="Lucknow">Lucknow</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Aagra">Aagra</option>
+                    </optgroup>
+                    <optgroup class="USA">
+                        <option value="New York">New York</option>
+                        <option value="Washington DC">Washington DC</option>
+                        <option value="Chicago">Chicago</option>
+                    </optgroup>
+                </select>
+                <ul class="error" id="addError"></ul>
+                <input required type="button" id="saveStudent" value="SAVE">
+            </form>
+        </div>
+        <div id="updateStudentFormDiv">
+            <i id="closeUpdateFormButton" class="material-icons">close</i>
+            <h2> UPDATE STUDENT </h2>
+            <form id="updateStudentForm" action="index.html">
+                <input required name="Id" type="text" placeholder="give id" id="updateId" value="HA001">
+                <div class="error" id="updateIdExists"></div>
+                <input required name="Name" type="text" placeholder="enter name" id="updateName" value="Hassan">
+                <input required name="Age" type="number" placeholder="specify age" id="updateAge" value="24" min="18">
+                <input required name="Subject" type="text" placeholder="enter subject" id="updateSubject" value="JavaScript">
+                <select required name="Country" id="updateCountry">
+                    <option value="Pakistan">Pakistan</option>
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                </select>
+                <select required name="City" id="updateCity">
+                    <optgroup class="Pakistan">
+                        <option value="Lahore">Lahore</option>
+                        <option value="Karachi">Karachi</option>
+                        <option value="Multan">Multan</option>
+                    </optgroup>
+                    <optgroup class="India">
+                        <option value="Lucknow">Lucknow</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Aagra">Aagra</option>
+                    </optgroup>
+                    <optgroup class="USA">
+                        <option value="New York">New York</option>
+                        <option value="Washington DC">Washington DC</option>
+                        <option value="Chicago">Chicago</option>
+                    </optgroup>
+                </select>
+                <ul class="error" id="updateError"></ul>
+            <input required type="button" id="updateStudent" value="UDPATE">
+        </form>
+    </div>
+</body>
+</html>
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script src="script.js"></script>
